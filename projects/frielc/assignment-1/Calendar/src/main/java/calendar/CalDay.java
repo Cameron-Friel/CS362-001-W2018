@@ -82,7 +82,7 @@ public class CalDay {
 				}
 			}
 		    //The appointment hasn't been added yet, so add it
-		    getAppts().add(appt);
+		    getAppts().add(0, appt); //BUG added 0 to add to specify index
 		}
 	}
 

@@ -23,7 +23,6 @@ public class CalendarMain {
 		
      	/** the month the user is currently viewing **/
      	int thisMonth;
-    	
     	/** the year the user is currently viewing **/
     	 int thisYear;
     	
