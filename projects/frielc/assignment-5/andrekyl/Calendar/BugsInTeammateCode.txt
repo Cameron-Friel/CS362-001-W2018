@@ -1,0 +1,23 @@
+Cameron Friel
+Student ID: 932693356
+
+Bug 1
+
+The first bug I found was in the Appt java file. This bug was uncovered by testing a month which
+comes after a month that has less days than it with a start day input that it larger than the maximum
+preceding month's maximum day. I caught on to this bug when I ran through my tests and noticed that a
+test that had worked in my files did not in my teammate's. This lead me to see that my assertion that
+that test would work when it actually failed. After further observation it could be seen that the
+only way this bug occurred was from what I stated previously. In term of code, this line
+int NumDaysInMonth= CalendarUtil.NumDaysInMonth(startYear,startMonth); was changed to 
+int NumDaysInMonth= CalendarUtil.NumDaysInMonth(startYear,startMonth-1);. As can be seen it grabs
+the previous month's number of days instead of the month provided creating the bug. 
+
+Bug 2
+
+The second bug I found was in the TimeTable java file. This bug was uncovered by testing for a list
+of appointments and deleting the first one in the array making sure that null was returned. This test
+failed in my partner's code since I was testing for this case to be null, however, my partner's
+expected result was a length of four. This resulted from him changing the starting array bounds from
+i = 1 to i = 0 so that the first index could be modified. To be completely honest, I am not sure why
+the initial code had it set to this array index in the first place but I digress. 
